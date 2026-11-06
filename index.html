@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trust Triangle – NDI Roles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <h1>🔺 Trust Triangle</h1>
+  <p class="sub">Match the NDI roles to the right answers</p>
+
+  <!-- Step 1: Start the game -->
+  <div class="screen on" id="s-start"><div class="card center">
+    <div class="tri">🔺</div>
+    <h2>Ready to build trust?</h2>
+    <p>Play 5 matching rounds about <b>Issuer</b>, <b>Holder</b> and <b>Verifier</b>. Draw a line to connect each item to its match. Correct matches lock in and earn points!</p>
+    <button class="go" id="start">▶ Start the game</button>
+  </div></div>
+
+  <!-- Steps 2-9: play -->
+  <div class="screen" id="s-play">
+    <div class="top"><span class="pill" id="score">⭐ 0</span><span class="pill" id="prog">🧩 Round 1 / 5</span><span class="pill" id="err">❌ 0</span></div>
+    <div class="mas"><div class="face" id="face">🛡️</div><div id="msg"></div></div>
+    <div id="board"><svg id="lines"></svg><div class="col" id="roles"></div><div class="col" id="defs"></div></div>
+    <div class="center"><button class="go" id="nextr" style="display:none">Next round ➜</button></div>
+    <p class="hint">Tap an item on the left, then its match on the right. Correct +10 · Wrong −5</p>
+  </div>
+
+  <!-- Steps 10-11: result -->
+  <div class="screen" id="s-end"><div class="card center">
+    <h2 id="title"></h2>
+    <div class="stars" id="stars"></div>
+    <div class="big" id="final"></div>
+    <p id="verdict"></p>
+    <button class="go" id="again">🔁 Play again</button>
+  </div></div>
+</div>
+<canvas id="cv"></canvas>
+<script src="script.js"></script>
+</body>
+</html>
